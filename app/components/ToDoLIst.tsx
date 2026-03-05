@@ -103,7 +103,7 @@ const ToDoList: React.FC = () => {
           To Do List
         </h1>
 
-        <div className="flex flex-row gap-3 mb-6">
+        <div className="flex flex-col sm:flex-row gap-3 mb-6">
           <input
             type="text"
             value={newTask}
@@ -112,8 +112,9 @@ const ToDoList: React.FC = () => {
             className="flex-1 p-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
             placeholder="Add a new task"
           />
+
           <button
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 rounded-lg hover:scale-105 hover:shadow-lg transition-all duration-300"
+            className="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 rounded-lg hover:scale-105 hover:shadow-lg transition-all duration-300"
             onClick={addTask}
           >
             Add
@@ -179,7 +180,7 @@ const ToDoList: React.FC = () => {
                     onClick={() => startEditing(task)}
                     className="flex items-center gap-1 border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 px-3 py-1 ml-2 rounded-lg hover:bg-cyan-500 hover:text-white hover:shadow-md transition-all duration-300"
                   >
-                   Edit
+                    Edit
                   </button>
                 </div>
               )}
